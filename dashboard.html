@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Farming</title>
+
+    <!-- Flask CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <div class="logo">
+            🌱 Farming
+        </div>
+
+        <nav>
+
+            
+
+            <a href="{{ url_for('dashboard') }}">
+                Dashboard
+            </a>
+
+            <a href="{{ url_for('profile') }}">
+                Profile
+            </a>
+
+            <a href="{{ url_for('history') }}">
+                History
+            </a>
+
+            <a href="{{ url_for('logout') }}">Logout</a>        
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main -->
+    <main>
+
+        <!-- Dashboard Header -->
+        <section class="dashboard-header">
+
+            <h1>
+                Farming Dashboard
+            </h1>
+
+            <p>
+                Get intelligent fertilizer and
+                pesticide recommendations for your crops.
+            </p>
+
+        </section>
+
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard-section">
+
+            <div class="dashboard-grid">
+
+
+                <!-- Fertilizer Recommendation -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🌾
+                    </div>
+
+                    <h2>
+                        Fertilizer Recommendation
+                    </h2>
+
+                    <p>
+                        Enter crop and soil information
+                        to get a suitable fertilizer
+                        recommendation.
+                    </p>
+
+                    <a href="{{ url_for('crop') }}">
+                        <button type="button"
+                                class="primary-btn">
+                            Start Analysis
+                        </button>
+                    </a>
+
+                </div>
+
+
+                <!-- Pesticide Recommendation -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🧪
+                    </div>
+
+                    <h2>
+                        Pesticide Recommendation
+                    </h2>
+
+                    <p>
+                        Enter crop and farming information
+                        to get a suitable pesticide
+                        recommendation.
+                    </p>
+
+                    <a href="{{ url_for('crop') }}">
+                        <button type="button"
+                                class="primary-btn">
+                            Get Recommendation
+                        </button>
+                    </a>
+
+                </div>
+
+
+                <!-- Analysis History -->
+                <div class="dashboard-card">
+
+                    <div class="dashboard-icon">
+                        📊
+                    </div>
+
+                    <h2>
+                        Analysis History
+                    </h2>
+
+                    <p>
+                        View your previous fertilizer
+                        and pesticide recommendations.
+                    </p>
+
+                    <a href="{{ url_for('history') }}">
+                        <button type="button"
+                                class="primary-btn">
+                            View History
+                        </button>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Farming -
+            Fertilizer &amp; Pesticide
+            Recommendation System
+        </p>
+
+    </footer>
+
+
+    <!-- Flask JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

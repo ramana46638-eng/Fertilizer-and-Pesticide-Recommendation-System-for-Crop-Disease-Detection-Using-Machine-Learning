@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farming | Fertilizer & Pesticide Recommendation</title>
+
+    <!-- Flask CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <div class="logo">
+            🌱 Farming
+        </div>
+
+        <nav>
+            
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('registration') }}">Register</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    Fertilizer & Pesticide
+                    <br>
+                    Recommendation System
+                </h1>
+
+                <p>
+                    Make smarter farming decisions using
+                    Machine Learning and intelligent crop analysis.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="{{ url_for('registration') }}">
+                        <button class="primary-btn">
+                            Get Started
+                        </button>
+                    </a>
+
+                    <a href="{{ url_for('login') }}">
+                        <button class="secondary-btn">
+                            Login
+                        </button>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features Section -->
+        <section class="features">
+
+            <h2>Our Features</h2>
+
+            <p class="section-description">
+                Our system helps farmers make better decisions
+                for healthier and more productive crops.
+            </p>
+
+
+            <div class="feature-container">
+
+                <!-- Fertilizer -->
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🌾
+                    </div>
+
+                    <h3>
+                        Fertilizer Recommendation
+                    </h3>
+
+                    <p>
+                        Get suitable fertilizer recommendations
+                        based on soil and crop conditions.
+                    </p>
+
+                </div>
+
+
+                <!-- Crop Disease Detection -->
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📷
+                    </div>
+
+                    <h3>
+                        Crop Disease Detection
+                    </h3>
+
+                    <p>
+                        Upload a crop image and analyze possible
+                        crop diseases using Machine Learning.
+                    </p>
+
+                </div>
+
+
+                <!-- Pesticide -->
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🧪
+                    </div>
+
+                    <h3>
+                        Pesticide Recommendation
+                    </h3>
+
+                    <p>
+                        Receive suitable pesticide or treatment
+                        recommendations based on detected diseases.
+                    </p>
+
+                </div>
+
+
+                <!-- Analysis -->
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Crop Analysis
+                    </h3>
+
+                    <p>
+                        Analyze important crop and soil parameters
+                        to support better farming decisions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section class="about">
+
+            <div class="about-content">
+
+                <h2>About Our System</h2>
+
+                <p>
+                    The Fertilizer and Pesticide Recommendation System
+                    is designed to support farmers by providing
+                    intelligent agricultural recommendations.
+                </p>
+
+                <p>
+                    The system analyzes crop and soil information
+                    and uses Machine Learning techniques to recommend
+                    suitable fertilizers. Users can also upload crop
+                    images to identify possible diseases and receive
+                    appropriate treatment recommendations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Call To Action -->
+        <section class="cta">
+
+            <h2>
+                Ready to Make Farming Smarter?
+            </h2>
+
+            <p>
+                Create your account and start analyzing your crops.
+            </p>
+
+            <a href="{{ url_for('registration') }}">
+                <button class="primary-btn">
+                    Create Account
+                </button>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Farming -
+            Fertilizer &amp; Pesticide Recommendation System
+        </p>
+
+    </footer>
+
+
+    <!-- Flask JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

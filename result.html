@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analysis Result | Smart Farming</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            🌱 Farming
+        </div>
+
+        <nav>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+
+            <a href="{{ url_for('crop') }}">New Analysis</a>
+
+            <a href="{{ url_for('history') }}">History</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="result-section">
+
+            <h1>Crop Analysis Result</h1>
+
+            <p>
+                Here is your crop analysis and recommendation.
+            </p>
+
+
+            <div class="result-container">
+
+
+                <!-- Uploaded Crop Image -->
+                <div class="result-card uploaded-image-card">
+
+                    <h2>📷 Uploaded Crop Image</h2>
+
+                    <img
+                        src="{{ url_for('static', filename='uploads/' + image_filename) }}"
+                        alt="Uploaded Crop Leaf"
+                        class="uploaded-crop-image"
+                    >
+
+                </div>
+
+
+                <!-- Crop Information -->
+                <div class="result-card">
+
+                    <h2>🌾 Crop Information</h2>
+
+                    <p>
+                        <strong>Crop:</strong>
+                        <span id="resultCrop">
+                            {{ crop }}
+                        </span>
+                    </p>
+
+                    <p>
+                        <strong>Soil:</strong>
+                        <span id="resultSoil">
+                            {{ soil }}
+                        </span>
+                    </p>
+
+                </div>
+
+
+                <!-- Fertilizer Recommendation -->
+                <div class="result-card">
+
+                    <h2>🌱 Fertilizer Recommendation</h2>
+
+                    <p>
+                        Recommended fertilizer:
+                    </p>
+
+                    <h3 id="fertilizerResult">
+                        Recommended Fertilizer
+                    </h3>
+
+                    <p>
+                        Based on soil nutrients and crop requirements.
+                    </p>
+
+                </div>
+
+
+                <!-- Disease Detection -->
+                <div class="result-card">
+
+                    <h2>🦠 Disease Detection</h2>
+
+                    <p>
+                        Detected disease:
+                    </p>
+
+                    <h3 id="diseaseResult">
+                        {{ disease }}
+                    </h3>
+
+                </div>
+
+
+                <!-- Pesticide Recommendation -->
+                <div class="result-card">
+
+                    <h2>🧪 Pesticide Recommendation</h2>
+
+                    <p>
+                        Suggested treatment:
+                    </p>
+
+                    <h3 id="pesticideResult">
+                        Recommended Treatment
+                    </h3>
+
+                    <p>
+                        Always follow the product label and local
+                        agricultural guidance when applying pesticides.
+                    </p>
+
+                </div>
+
+
+                <!-- Confidence -->
+                <div class="result-card">
+
+                    <h2>📊 Confidence</h2>
+
+                    <div class="confidence">
+
+                        <span id="confidenceValue">
+                            {{ confidence }}%
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Buttons -->
+                <div class="result-buttons">
+
+                    <a href="{{ url_for('crop') }}">
+                        <button class="primary-btn">
+                            New Analysis
+                        </button>
+                    </a>
+
+
+                    <a href="{{ url_for('history') }}">
+                        <button class="secondary-btn">
+                            View History
+                        </button>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Farming -
+            Fertilizer &amp; Pesticide Recommendation System
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
